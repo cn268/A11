@@ -167,7 +167,7 @@ footer p {
 #nav_menu ul li {
     float: left;
     position: relative;
-    width: auto; /* Allow the list items to adjust their width dynamically */
+    width: 100%; /* Allow the list items to adjust their width dynamically */
 }
 
 #nav_menu ul li a {
