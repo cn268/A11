@@ -12,9 +12,40 @@
     <script src="js/jquery.slicknav.min.js"></script>
     <script>
         $(document).ready(function(){
-            $('#mobile_menu ul').slicknav();
+            $('#nav_menu ul').slicknav();
         });
     </script>
+	<script>
+		// JavaScript code to toggle between desktop and mobile menu
+$(document).ready(function(){
+    // Function to toggle menu based on screen width
+    function toggleMenu() {
+        var screenWidth = $(window).width();
+        if (screenWidth <= 768) { // Adjust breakpoint as needed
+            $('#mobile_menu').css('display', 'block');
+            $('#nav_menu').css('display', 'none');
+        } else {
+            $('#mobile_menu').css('display', 'none');
+            $('#nav_menu').css('display', 'block');
+        }
+    }
+
+    // Initial call to toggleMenu function
+    toggleMenu();
+
+    // Event listener for window resize
+    $(window).resize(function() {
+        toggleMenu();
+    });
+
+    // Event listener for menu toggle button
+    $('#menu_toggle').click(function() {
+        $('#mobile_menu ul').toggle();
+        $(this).toggleClass('active');
+    });
+});
+
+	</script>
 </head>
 
 <body>
