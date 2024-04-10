@@ -3,48 +3,17 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>San Joaquin Valley Town Hall</title>
 	<link rel="shortcut icon" href="images/favicon.ico">
 	<link rel="stylesheet" href="styles/c7_main.css">
 	<link rel="stylesheet" href="styles/slicknav.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/jquery.slicknav.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('#nav_menu ul').slicknav();
-        });
-    </script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
 	<script>
-		// JavaScript code to toggle between desktop and mobile menu
-$(document).ready(function(){
-    // Function to toggle menu based on screen width
-    function toggleMenu() {
-        var screenWidth = $(window).width();
-        if (screenWidth <= 768) { // Adjust breakpoint as needed
-            $('#mobile_menu').css('display', 'block');
-            $('#nav_menu').css('display', 'none');
-        } else {
-            $('#mobile_menu').css('display', 'none');
-            $('#nav_menu').css('display', 'block');
-        }
-    }
-
-    // Initial call to toggleMenu function
-    toggleMenu();
-
-    // Event listener for window resize
-    $(window).resize(function() {
-        toggleMenu();
-    });
-
-    // Event listener for menu toggle button
-    $('#menu_toggle').click(function() {
-        $('#mobile_menu ul').toggle();
-        $(this).toggleClass('active');
-    });
-});
-
+		$(document).ready(function(){
+			$('#nav_menu').slicknav();
+		});
 	</script>
 </head>
 
@@ -54,48 +23,25 @@ $(document).ready(function(){
 		<h2>San Joaquin Valley Town Hall</h2>
 		<h3>Celebrating our <span class="shadow">75<sup>th</sup></span> Year</h3>
 	</header>
-
 	<nav id="mobile_menu">
-        <button id="menu_toggle" aria-label="Toggle Menu" aria-expanded="false">
-            Menu
-            <span class="hamburger"></span>
-        </button>
-        <ul>
-            <li><a href="index.html" class="current">Home</a></li>
-            <li><a href="#">Speakers</a></li>
-            <li><a href="#">Luncheons</a></li>
-            <li><a href="#">Tickets</a></li>
-            <li>
-                <a href="#">About Us</a>
-                <ul>
-                    <li><a href="#">Our History</a></li>
-                    <li><a href="#">Board of Directors</a></li>
-                    <li><a href="#">Past Speakers</a></li>
-                    <li><a href="#">Contact Information</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-
+		
+	</nav>
 	<nav id="nav_menu">
 		<ul>
 			<li><a href="index.html" class="current">Home</a></li>
-			<li><a href="#">Speakers</a></li>
-			<li><a href="#">Luncheons</a></li>
-			<li><a href="#">Tickets</a></li>
-			<li>
-				<a href="#">About Us</a>
-				<ul>
-					<li><a href="#">Our History</a></li>
-					<li><a href="#">Board of Directors</a></li>
-					<li><a href="#">Past Speakers</a></li>
-					<li><a href="#">Contact Information</a></li>
+			<li><a href="speakers.html">Speakers</a></li>
+			<li><a href="luncheons.html">Luncheons</a></li>
+			<li><a href="tickets.html">Tickets</a></li>
+			<li><a href="about_us.html">About Us</a>
+				<ul class="submenu">
+					<li><a href=#>Our History</a></li>
+					<li><a href=#>Board of Directors</a></li>
+					<li><a href=#>Past Speakers</a></li>
+					<li><a href=#>Contact Information</a></li>
 				</ul>
 			</li>
 		</ul>
 	</nav>
-
-	
 	<main>
 		<section>
 			<h2>Our Mission</h2>
@@ -129,6 +75,7 @@ $(document).ready(function(){
 		
 		<aside>
 			<h2>Guest speakers</h2>
+			<div class="speaker-list">
 			<h3>October<br><a href="speakers/brancaccio.html">David Brancaccio</a></h3>
 			<img src="images/brancaccio75.jpg" alt="David Brancaccio photo">
 			<h3>November<br><a href="speakers/sorkin.html">Andrew Ross Sorkin</a></h3>
@@ -137,10 +84,11 @@ $(document).ready(function(){
 			<img src="images/chua75.jpg" alt="Amy Chua photo">
 			<h3>February<br><a href="speakers/c6_sampson.html">Scott Sampson</a></h3>
 			<img src="images/sampson75.jpg" alt="Scott Sampson photo">
+			</div>
 		</aside>
 	</main>
 	<footer>
-		<p>&copy; 2024, Claire Ng </p>
+		<p>&copy; 2024, Claire Ng</p>
 	</footer>
 </body>
 </html>
