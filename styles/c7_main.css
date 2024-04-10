@@ -133,6 +133,7 @@ section ul {
 }
 section li {
 	padding-bottom: .35em;
+	list-style: circle;
 }
 
 /* the styles for the article */
