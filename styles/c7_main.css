@@ -17,6 +17,61 @@ body {
 a:focus, a:hover {
 	font-style: italic;
 }
+
+/* the styles for the nav_menu */
+#nav_menu ul {
+    list-style-type: none;
+	position: relative;
+    margin: 0;
+    padding: 0;
+}
+#nav_menu ul li {
+    float: left;
+}
+
+#nav_menu ul li a {
+    display:block;
+    width: 160px;
+    text-align:center;
+    padding-top: 1em;
+	padding-bottom: 1em;
+    text-decoration: none; 
+    background-color: #800000;
+    color: white;
+    font-weight: bold;
+}
+
+#nav_menu ul li a.current{
+    color: yellow;
+}
+
+
+/* the styles for the submenu */
+
+/* Question 12 */
+#nav_menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%; 
+}
+
+/* Question 13 */
+#nav_menu ul ul li {
+    float: none; 
+}
+
+/* Question 14 */
+#nav_menu ul li:hover > ul {
+    display: block; 
+}
+
+/* Question 16 */
+#nav_menu>ul::after {
+    content: ""; 
+    display: block;
+    clear: both;
+}
+
 /* the styles for the header */
 header {
 	padding: 1.5em 0 2em 0;
@@ -45,66 +100,6 @@ header img {
 .shadow {
 	text-shadow: 2px 2px 2px #800000;
 }
-/* Nav Menu */
-#nav_menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    position: relative;
-}
-#nav_menu ul li {
-    float: left;
-	position: relative;
-}
-#nav_menu ul li a {
-    display: block;
-    width: 160px;
-    text-align: center;
-    padding: 1em 0;
-    text-decoration: none;
-    background-color: #800000;
-    color: white;
-    font-weight: bold;
-}
-#nav_menu li.current {
-    color: yellow
-}
-#nav_menu ul ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-}
-#nav_menu ul li:hover > ul {
-    display: block;
-}
-#nav_menu > ul::after {
-    content: '';
-    clear: both;
-    display: block;
-}
-/* Style rule for submenu */
-.submenu {
-    position: absolute;
-    background-color: #800000;
-    list-style: none;
-	text-align: left;
-    margin: 0;
-    padding: 0;
-}
-#nav_menu li:hover .submenu {
-    display: block;
-}
-#nav_menu::after {
-	content: "";
-	display: block;
-	clear: both;
-}
-/* Ensure submenu items are displayed vertically */
-.submenu li {
-	display: block;
-	float: none;
-}
 /* the styles for the section */
 section {
 	width: 525px;
@@ -121,6 +116,10 @@ section h2 {
 	font-size: 130%;
 	padding: .5em 0 .25em 0;
 }
+
+section ul li {
+    list-style-type: circle;
+}
 section p {
 	padding-bottom: .5em;
 }
@@ -133,7 +132,6 @@ section ul {
 }
 section li {
 	padding-bottom: .35em;
-	list-style: circle;
 }
 
 /* the styles for the article */
@@ -185,5 +183,3 @@ footer p {
 	color: white;
 	padding: 1em 0;
 }
-
-
